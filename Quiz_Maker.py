@@ -78,8 +78,6 @@ while quiz_on:
             else:
                 wrong_answers.append(user_answer)
 
-    quiz_on = False
-
     if len(correct_answers) > len(wrong_answers):
         print('Congrats! You had {} correct answers and {} wrong answers.'.format(len(correct_answers), len(wrong_answers)))
         print('Wrong answers are:')
