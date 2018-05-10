@@ -1,0 +1,8 @@
+Name                      Role                      Dancing experience (years)Country                   
+Katalin                   F                         5                         Polan                     
+Katalin                   L/F                       3                         Hungary                   
+Katerina                  F                         4                         Greece                    
+Mario                     L/F                       7                         Italy                     
+Mariola                   F                         2                         Serbia                    
+Mark                      L                         3                         US                        
+Mark                      L                         6                         UK                        
