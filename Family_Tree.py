@@ -24,7 +24,7 @@ def enter_person():
 from anytree import Node, RenderTree
 
 def family_tree():
-    
+
     grandfather = Node(persons['grandfather'].name, birth = persons['grandfather'].birth, death = persons['grandfather'].death )
     father = Node(persons['father'].name, parent=grandfather, birth = persons['father'].birth, death = persons['father'].death)
     you = Node(persons['you'].name, parent=father, birth = persons['you'].birth, death = '' )
@@ -41,17 +41,3 @@ clear_output()
 
 print('Here is your family tree:\n')
 family_tree()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
