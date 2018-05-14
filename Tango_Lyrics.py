@@ -1,6 +1,5 @@
 import urllib.request
 from bs4 import BeautifulSoup
-import ssl
 import string
 
 alphabet = string.ascii_lowercase
