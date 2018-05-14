@@ -19,7 +19,7 @@ headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 # list of words that should not be displayed:
 skip_words = ['Log in','Register','Español', 'Deutsch','Português','The Music','The Artists','Carlos Gardel','The Dance','The Chronicles','The Community',
-'Film Library', 'Music','Lyrics','Scores','Videos','Discographies','All','Tango','Milonga','Poem','Folklore','Song','Other','Foxtrot','Tango music',
+'Film Library', 'Music','Lyrics','Scores','Videos','Discographies','All','Tango','Milonga','Poem','Folklore','Waltz','Song','Other','Foxtrot','Tango music',
 'Tango lyrics','Tango songs','Tango scores','Tango Artists','Tango Musicians','Tango Poets','Tango Singers','Tango Female singers','Tango Composers', 'About us',
 'Contributors','Contact us','The Selection (Dec 2016)','The Selection (May-16)','The Selection (Nov-15)','The Selection (Jun 2015)','The Selection','Today´s music selection']
 # there must be other way to exclude these words from the output!
