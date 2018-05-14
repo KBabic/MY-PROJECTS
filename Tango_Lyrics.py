@@ -24,7 +24,7 @@ skip_words = ['Log in','Register','Español', 'Deutsch','Português','The Music'
 'Contributors','Contact us','The Selection (Dec 2016)','The Selection (May-16)','The Selection (Nov-15)','The Selection (Jun 2015)','The Selection','Today´s music selection']
 # there must be other way to exclude these words from the output!
 
-tango_lyrics = open('C:\\Users\\Kaja\\Desktop\\PYTHON COURSERA\\tango_lyrics.txt','w+')
+tango_lyrics = open('C:\\Users\\Kaja\\Desktop\\MY-PROJECTS\\tango_lyrics.txt','w+')
 for link in urls:
     letter = alphabet[urls.index(link)].upper()
     req = urllib.request.Request(link, headers = headers)
