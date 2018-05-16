@@ -83,7 +83,7 @@ while quiz_on:
         print('Wrong answers are:')
         print(wrong_answers)
     else:
-        print('Oops! You had {} wrong answers and {} correct answers.'.format(len(correct_answers), len(wrong_answers)))
+        print('Oops! You had {} wrong answers and {} correct answers.'.format(len(wrong_answers), len(correct_answers)))
         print('Wrong answers are:')
         print(wrong_answers)
 
