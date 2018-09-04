@@ -1,4 +1,4 @@
-lista = []
+my_list = []
 
 length = int(input('How many elements will your list have? '))
 print('\n')
@@ -6,27 +6,27 @@ print('\n')
 while length > 0:
     element = int(input('Add a number to your list: '))
     length -= 1
-    lista.append(element)
+    my_list.append(element)
 
-print('\nYour list is:',lista)
+print('\nYour list is:',my_list)
 
-nova_lista = []
+new_list = []
 
-while len(lista) > 0:
-    
-    for counter in range(1,len(lista)):
-    
-        n = len(lista)
-        a = lista[n-counter]   
-        b = lista[n-counter-1] 
+while len(my_list) > 0:
+
+    for counter in range(1,len(my_list)):
+
+        n = len(my_list)
+        a = my_list[n-counter]
+        b = my_list[n-counter-1]
 
         if a<b:
-            lista.remove(b)             
-            lista.insert(n-counter,b)   
+            my_list.remove(b)
+            my_list.insert(n-counter,b)
         else:
             pass
 
-    x = lista.pop(0)      
-    nova_lista.append(x)  
+    x = my_list.pop(0)
+    new_list.append(x)
 
-print('\nYour bubble sorted list is:',nova_lista)
+print('\nYour bubble sorted list is:',new_list)

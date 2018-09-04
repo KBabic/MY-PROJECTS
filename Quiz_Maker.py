@@ -17,15 +17,22 @@ for line in lines:
     answers.append(str(line_id) + '_' + line.split('?')[1])
     shuffle(answers)
 
-questions_file = open('C:\\Users\\Kaja\\Desktop\\MY-PROJECTS\\questions.txt','w+')
-for question in questions:
-    questions_file.write(question)
-questions_file.close()
+def open_file(file_string, file_array):
+    file = open(file_string, 'w+');
+    for el in file_array:
+        file.write(el)
+    file.close()
+    return file
 
-answers_file = open('C:\\Users\\Kaja\\Desktop\\MY-PROJECTS\\answers.txt','w+')
-for answer in answers:
-    answers_file.write(answer)
-answers_file.close()
+questions_file = open_file('C:\\Users\\Kaja\\Desktop\\MY-PROJECTS\\questions.txt', questions)
+#for question in questions:
+    #questions_file.write(question)
+#questions_file.close()
+
+answers_file = open_file('C:\\Users\\Kaja\\Desktop\\MY-PROJECTS\\answers.txt', answers)
+#for answer in answers:
+    #answers_file.write(answer)
+#answers_file.close()
 
 quiz_file.close()
 

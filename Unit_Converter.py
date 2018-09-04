@@ -15,7 +15,7 @@ for key in conversions.keys():
 print('\n')
 
 while True:
-    conversion = input()    
+    conversion = input()
     if conversion in conversions.keys():
         break
     else:
@@ -25,33 +25,32 @@ def choose_unit(conversion):
     offered_units = conversions[conversion]
     for unit in offered_units:
         print(unit)
-        
+
 
 print('\nPlease choose a unit to convert from. The following are offered:')
 choose_unit(conversion)
 
-while True:
-    unit_1 = input()
-    if unit_1 in conversions[conversion]:
-        break
-    else:
-        print('Please enter only one of the offered units.')
+def check_unit():
+    while True:
+        unit = input()
+        if unit in conversions[conversion]:
+            return unit
+            break
+        else:
+            print('Please enter only one of the offered units.')
+
+unit1 = check_unit()
 
 # remove the chosen unit from list of offered units (makes no sense to convert from EUR to EUR):
-conversions[conversion].pop(conversions[conversion].index(unit_1))
+conversions[conversion].pop(conversions[conversion].index(unit1))
 
 print('\nPlease choose a unit to convert to. The following are offered:')
 choose_unit(conversion)
 
-while True:
-    unit_2 = input()
-    if unit_2 in conversions[conversion]:
-        break
-    else:
-        print('Please enter only one of the offered units.')
+unit2 = check_unit()
 
 #list of units needs to be updated again with the unit which was popped out, because we need original list for later calculation:
-conversions[conversion].append(unit_1)
+conversions[conversion].append(unit1)
 
 # now unit_1 and unit_2 need to be passed to the calculation part
 # convert unit_1 to a base unit and then convert base unit to unit_2
@@ -66,8 +65,8 @@ conv_values = {'EUR':{'EUR':1,'USD':1.23,'GBP':0.88,'JPY':132.59,'CHF':1.20,'RUB
  'h':{'s':3600,'min':60,'h':1,'days':0.0417,'weeks':0.00595,'months':0.00137,'years':0.000114},
  'km/h':{'km/h':1,'m/s':0.2778,'mph':0.6213,'mps':0.000173,'yards/h':1093.61,'yards/s':0.3038,'nautical miles/h':0.53996} }
 
-value_1 = conv_values[base_unit][unit_1]
-value_2 = conv_values[base_unit][unit_2]
+value_1 = conv_values[base_unit][unit1]
+value_2 = conv_values[base_unit][unit2]
 
 while True:
     try:
@@ -75,9 +74,8 @@ while True:
         break
     except:
         print('Value needs to be a number!')
-    
+
 
 converted_value = inserted_value / value_1 * value_2
 
 print('\nThe result is: ',round(converted_value,4))
-
